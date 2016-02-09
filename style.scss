@@ -1,44 +1,67 @@
 //VARIABLES
-
 $darkbackground: dimgray;
 $medbackground: darkgray;
 $accent: firebrick;
-$fontbase: 'Open Sans', sans-serif;
+$medgray: #333333;
+$fontbase: 'Open Sans';
+$sans:sans-serif;
+$serif:serif;
 $defaultmargin: 10%;
-
-
-
-
-body {
-    background-color: darkgrey;
-}
-
+//BEGIN UNIVERSAL STYLES
 * {
     font-family: $fontbase;
 }
 
-.footer {
-    font-size: 1em;
-    font-family: $fontbase;
-    padding: .5em .25em .5em 1em;
+.redtext {
+        color: $accent;
+        text-shadow: 0 0 3px #FFF;
+    }
+
+//END UNIVERSAL STYLES
+//BEGIN Header Styles
+.claytonLose {
+    cursor: pointer;
+    border: none;
+    font: normal 5em/normal "Satisfy", Helvetica, $sans;
     color: #FFF;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.91);
-    background-color: dimgray;
-    -webkit-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
     text-align: center;
-}
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
-ul {
-    list-style-type: none;
-}
 
-a {
-    color: #CC2900;
-    text-decoration: none;
+&:hover {
+    color: $accent;
 }
-
+}
+//END Header Styles
+//BEGIN Main Styles
 .main {
+    min-height: 100%;
+    position: relative;
+    .headshot {
+        width: 25%;
+        border-radius: 100%;
+        margin-left: 12%;
+        margin-top: 70px;
+        float: left;
+        border: 2px solid black;
+        max-height: 100%;
+    }
+}
+
+//END Wrapper Styles
+//BEGIN Assignments and About Styles
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: darkgrey;
+}
+
+.nav {
     background-color: white;
     margin-left: $defaultmargin;
     margin-right: $defaultmargin;
@@ -56,101 +79,67 @@ a {
     -webkit-box-shadow: 15px 20px 8px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 15px 20px 8px 0 rgba(0, 0, 0, 0.3);
     clear: both;
+    .classname {
+        background-color: $medgray;
+        margin-bottom: 0;
+        margin-top: 0;
+        .classnametext {
+            padding: .5em;
+            -webkit-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            color: $accent;
+            text-align: left;
+            text-transform: normal;
+           
+        }
+    }
+    ul {
+        list-style-type: none;
+        a {
+            color: black;
+            text-decoration: none;
+            &:hover {
+    color: $accent;
+  }
+        }
+    }
 }
 
-.title {
-    background-color: black;
-    margin-bottom: 0;
-    margin-top: 0;
+.about {
+    float: right;
+    margin-right: 12%;
+    margin-top: 20px;
+    width: 40%;
+    background-color: #FFF;
+    padding: 0px 2% 2% 2%;
+    border: 2px solid black;
+    
 }
 
-#text {
-    padding: .5em;
-    -webkit-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    font: normal 1.5em/1 "Codystar", "Open Sans", sans-serif;
-    color: #CC2900;
-    text-align: left;
-    text-transform: normal;
-}
-
-.logo {
-    cursor: pointer;
-    border: none;
-    font: normal 5em/normal "Satisfy", Helvetica, sans-serif;
-    color: rgba(255, 255, 255, 1);
-    text-align: center;
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    text-shadow: 0 1px 0 rgb(204, 204, 204), 0 2px 0 rgb(201, 201, 201), 0 3px 0 rgb(187, 187, 187), 0 4px 0 rgb(185, 185, 185), 0 5px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
-    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.logo:hover {
-    color:$accent;
-    word-spacing: 10px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 2px 0 rgba(255, 255, 255, 1), 0 3px 0 rgba(255, 255, 255, 1), 0 4px 0 rgba(255, 255, 255, 1), 0 5px 0 rgba(255, 255, 255, 1), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 -5px 10px rgba(0, 0, 0, 0.247059), 0 -7px 10px rgba(0, 0, 0, 0.2), 0 -15px 20px rgba(0, 0, 0, 0.14902);
-    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.wrapper {
-    min-height: 100%;
-    position: relative;
-}
-
-.content {
-    padding-bottom: 100px;
-}
-
+//END Assignments and About Styles
+//BEGIN Footer Styles
 .footer {
-    background-color: #666666;
+    font-size: 1em;
+    font-family: $fontbase;
+    padding: .5em .25em 30px 1em;
+    color: #FFF;
+    background-color: dimgray;
+    text-align: center;
     width: 100%;
     height: 30px;
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-bottom: 30px;
+    a {
+        text-decoration: none;
+    }
 }
 
-
-img.headshot {
-    width: 25%;
-    border-radius: 100%;
-    margin-left: 12%;
-    margin-top: 70px;
-    float: left;
-    border: 2px solid black;
-    max-height: 250px;
-
+.footerpadding {
+    padding-bottom: 100px;
 }
 
-.about {float:right;
-        margin-right: 12%;
-        margin-top: 20px;
-        width:40%;
-        background-color: #FFF;
-        padding: 0px 2% 2% 2%;
-        border: 2px solid black;}
-
-
-.redtext {color:$accent;
-        text-shadow: 0 0 3px #FFF;
-            }
+//END Footer Styles
