@@ -7,6 +7,8 @@ $fontbase: 'Open Sans';
 $sans:sans-serif;
 $serif:serif;
 $defaultmargin: 10%;
+
+
 //BEGIN UNIVERSAL STYLES
 * {
     font-family: $fontbase;
@@ -80,7 +82,7 @@ body {
     box-shadow: 15px 20px 8px 0 rgba(0, 0, 0, 0.3);
     clear: both;
     .classname {
-        background-color: $medgray;
+        background-color: lighten($medgray, 27%);
         margin-bottom: 0;
         margin-top: 0;
         .classnametext {
@@ -90,7 +92,7 @@ body {
             -webkit-box-sizing: content-box;
             -moz-box-sizing: content-box;
             box-sizing: content-box;
-            color: $accent;
+            color: desaturate($accent, 10%);
             text-align: left;
             text-transform: normal;
            
@@ -126,7 +128,7 @@ body {
     font-family: $fontbase;
     padding: .5em .25em 30px 1em;
     color: #FFF;
-    background-color: dimgray;
+    background-color: darken($medbackground, 30%);
     text-align: center;
     width: 100%;
     height: 30px;
