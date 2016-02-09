@@ -64,6 +64,9 @@ html, body {
   .nav ul {
     list-style-type: none; }
 
+.container {
+  width: 100%; }
+
 .about {
   border-radius: 10px;
   border: 2px solid black;
@@ -71,7 +74,7 @@ html, body {
   float: right;
   margin-right: 12%;
   margin-top: 20px;
-  width: 40%;
+  width: 39.58333%;
   background-color: #FFF;
   padding: 0px 2% 2% 2%;
   max-height: 430px; }

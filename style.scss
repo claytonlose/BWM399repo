@@ -54,7 +54,7 @@ a {
     position: relative;
     .headshot {
         @include radandborder(100%, 2px solid #FFF);
-        width: 25%;
+        width: 240px / 960px * 100%;
         margin-left: 12%;
         margin-top: 70px;
         float: left;
@@ -81,7 +81,7 @@ body {
     background-color: white;
     margin-left: $defaultmargin;
     margin-right: $defaultmargin;
-    width: 80%;
+    width: 100%-20%; //total width minus margins
     padding-bottom: 10px;
     margin-top: 2%;
     margin-bottom: 30px;
@@ -103,13 +103,16 @@ body {
     }
 }
 
+
+.container {width:100%;}
+
 .about {
     @include radandborder(10px, 2px solid black);
     font-size: 1em;
     float: right;
     margin-right: 12%;
     margin-top: 20px;
-    width: 40%;
+    width: 380px/960px * 100%;
     background-color: #FFF;
     padding: 0px 2% 2% 2%;
     max-height: 430px;
