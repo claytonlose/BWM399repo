@@ -5,6 +5,12 @@
   color: firebrick;
   text-shadow: 0 0 3px #FFF; }
 
+a {
+  color: black;
+  text-decoration: none; }
+  a:hover {
+    color: firebrick; }
+
 .claytonLose {
   cursor: pointer;
   border: none;
@@ -13,7 +19,7 @@
   text-align: center;
   -o-text-overflow: clip;
   text-overflow: clip;
-  margin-top: 0px;
+  margin-top: 25px;
   margin-bottom: 0px; }
   .claytonLose:hover {
     color: firebrick; }
@@ -28,10 +34,10 @@
     margin-top: 70px;
     float: left;
     border: 2px solid black;
-    max-height: 100%; }
+    max-height: 300px;
+    max-width: 300px; }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -45,19 +51,10 @@ body {
   padding-bottom: 10px;
   margin-top: 2%;
   margin-bottom: 30px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  -webkit-box-shadow: 15px 20px 8px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 20px 8px 0 rgba(0, 0, 0, 0.3);
   clear: both; }
   .nav .classname {
     background-color: #787878;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     margin-top: 0; }
     .nav .classname .classnametext {
       padding: .5em;
@@ -71,20 +68,18 @@ body {
       text-transform: normal; }
   .nav ul {
     list-style-type: none; }
-    .nav ul a {
-      color: black;
-      text-decoration: none; }
-      .nav ul a:hover {
-        color: firebrick; }
 
 .about {
+  font-size: 1em;
   float: right;
   margin-right: 12%;
   margin-top: 20px;
   width: 40%;
   background-color: #FFF;
   padding: 0px 2% 2% 2%;
-  border: 2px solid black; }
+  border: 2px solid black;
+  border-radius: 2%;
+  max-height: 430px; }
 
 .footer {
   font-size: 1em;
@@ -98,8 +93,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0; }
-  .footer a {
-    text-decoration: none; }
 
 .footerpadding {
   padding-bottom: 100px; }
